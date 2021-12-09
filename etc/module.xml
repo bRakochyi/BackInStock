@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Elogic etc
+ *
+ * @category Elogic
+ * @Package Elogic/BackInStock
+ * @copyright 2021 Elogic
+ * @author Bogdan Rakochyi
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Elogic_BackInStock" setup_version="1.0.0"/>
+</config>

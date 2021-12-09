@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Elogic view frontend layout
+ *
+ * @category Elogic
+ * @Package Elogic/BackInStock
+ * @copyright 2021 Elogic
+ * @author Bogdan Rakochyi
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="product.info.form.content">
+            <block class="Magento\Catalog\Block\Product\View" name="product.info.addtocart" as="addtocart" template="Elogic_BackInStock::product/view/addtocart.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

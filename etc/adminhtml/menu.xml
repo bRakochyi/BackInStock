@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Elogic etc adminhtml
+ *
+ * @category Elogic
+ * @Package Elogic/BackInStock
+ * @copyright 2021 Elogic
+ * @author Bogdan Rakochyi
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Elogic_BackInStock::top_level" module="Elogic_BackInStock" resource="Magento_Backend::content" sortOrder="100" title="Elogic" parent="Magento_Backend::marketing" />
+        <add action="elogic_backinstock/interest/index" id="Elogic_BackInStock::elogic_backinstock_interest" module="Elogic_BackInStock" parent="Elogic_BackInStock::top_level" resource="Magento_Backend::content" sortOrder="500" title="Back in Stock Interest"/>
+    </menu>
+</config>

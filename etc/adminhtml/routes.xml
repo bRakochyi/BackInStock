@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Elogic etc adminhtml
+ *
+ * @category Elogic
+ * @Package Elogic/BackInStock
+ * @copyright 2021 Elogic
+ * @author Bogdan Rakochyi
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="admin">
+        <route frontName="elogic_backinstock" id="elogic_backinstock">
+            <module before="Magento_Backend" name="Elogic_BackInStock"/>
+        </route>
+    </router>
+</config>

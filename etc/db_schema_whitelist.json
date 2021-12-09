@@ -1,0 +1,22 @@
+{
+    "elogic_backinstock_interest": {
+        "column": {
+            "elogic_backinstock_interest": true,
+            "product_id": true,
+            "email": true,
+            "name": true,
+            "lastname": true,
+            "product_name": true,
+            "store_id": true,
+            "created_at": true,
+            "updated_at": true,
+            "has_notified": true
+        },
+        "index": {
+            "ELOGIC_BACKINSTOCK_CREATED_AT_UPDATED_AT_STATUS": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Elogic etc
+ *
+ * @category Elogic
+ * @Package Elogic/BackInStock
+ * @copyright 2021 Elogic
+ * @author Bogdan Rakochyi
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Elogic\BackInStock\Api\InterestRepositoryInterface" type="Elogic\BackInStock\Model\InterestRepository"/>
+    <preference for="Elogic\BackInStock\Api\Data\InterestInterface" type="Elogic\BackInStock\Model\Data\Interest"/>
+    <preference for="Elogic\BackInStock\Api\Data\InterestSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+    <virtualType name="Elogic\BackInStock\Model\ResourceModel\Interest\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">elogic_backinstock_interest</argument>
+            <argument name="resourceModel" xsi:type="string">Elogic\BackInStock\Model\ResourceModel\Interest\Collection</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="elogic_backinstock_interest_listing_data_source" xsi:type="string">Elogic\BackInStock\Model\ResourceModel\Interest\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="BackInStock_BackInStock" xsi:type="object">Elogic\BackInStock\Console\Command\BackInStock</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

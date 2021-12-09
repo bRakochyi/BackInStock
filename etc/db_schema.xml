@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Elogic etc
+ *
+ * @category Elogic
+ * @Package Elogic/BackInStock
+ * @copyright 2021 Elogic
+ * @author Bogdan Rakochyi
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table comment="Elogic_BackInStock Interest Table" engine="innodb" name="elogic_backinstock_interest" resource="default">
+        <column comment="Entity Id" identity="true" name="interest_id" nullable="false" padding="6" unsigned="true" xsi:type="smallint"/>
+        <constraint referenceId="PRIMARY" xsi:type="primary">
+            <column name="interest_id"/>
+        </constraint>
+        <column comment="Product Id" identity="false" name="product_id" nullable="false" xsi:type="int"/>
+        <column comment="Email" length="255" name="email" nullable="false" xsi:type="varchar"/>
+        <column comment="Name" length="255" name="name" nullable="false" xsi:type="varchar"/>
+        <column comment="Lastname" length="255" name="lastname" nullable="false" xsi:type="varchar"/>
+        <column comment="Product Name" length="255" name="product_name" nullable="false" xsi:type="varchar"/>
+        <column comment="Store Id" identity="false" name="store_id" nullable="false" default="1" xsi:type="int"/>
+        <column comment="Created At" name="created_at" nullable="false" xsi:type="datetime"/>
+        <column comment="Updated At" name="updated_at" nullable="false" xsi:type="datetime"/>
+        <column comment="Has Notified" name="has_notified" nullable="false" identity="false" default="0" xsi:type="int"/>
+    </table>
+</schema>
